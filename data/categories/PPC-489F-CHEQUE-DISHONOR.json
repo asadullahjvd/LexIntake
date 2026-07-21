@@ -1,0 +1,32 @@
+{
+  "category_id": "PPC-489F-CHEQUE-DISHONOR",
+  "title": "Cheque Dishonor",
+  "jurisdiction": "Pakistan (Federal)",
+  "legal_area": "Criminal / Financial Fraud",
+  "keywords": ["cheque", "check", "bounced cheque", "dishonored cheque", "489-F", "loan repayment", "bounced check", "insufficient funds"],
+  "statute_text": "Section 489-F, Pakistan Penal Code, 1860: Whoever dishonestly issues a cheque towards re-payment of a loan or fulfilment of an obligation which is dishonoured on presentation, shall be punishable with imprisonment which may extend to three years, or with fine, or with both, unless he can establish, for which the burden of proof shall rest on him, that he had made arrangements with his bank to ensure that the cheque would be honoured and that the bank was at fault in not honouring the cheque.",
+  "elements_required": [
+    "Issuance of the cheque with dishonest intent",
+    "The cheque was issued toward repayment of an existing loan or fulfilment of an existing obligation (not a future/contingent one)",
+    "The cheque was dishonoured on presentation"
+  ],
+  "common_defenses": [
+    "No existing obligation at time of issuance (cheque given as future security/guarantee)",
+    "Self-cheque exception (drawer is also payee)",
+    "Bank arrangement defense (accused proves they arranged for the cheque to be honoured and the bank was at fault)",
+    "Expired presentation period",
+    "Absence of dishonest intent (e.g., genuine commercial dispute)"
+  ],
+  "procedural_notes": [
+    "Bailable, compoundable offence - parties may settle even after FIR",
+    "Civil remedy for recovery of the cheque amount is separate and independent of criminal prosecution",
+    "Cheques tied to bank/financial-institution loans may instead fall under the Financial Institutions (Recovery of Finances) Ordinance, 2001"
+  ],
+  "example_scenario": "A supplier delivers goods on credit; the buyer's post-dated cheque bounces. The buyer claims the goods were substandard and payment was stopped over a genuine dispute - courts treat evidenced commercial disputes as relevant to whether dishonest intent is present.",
+  "sources": [
+    "Law and Justice Commission of Pakistan, Report No. 129",
+    "Courting The Law - Section 489-F PPC: Object, Scope & Trial",
+    "Khyber Pakhtunkhwa Judicial Academy case commentary"
+  ],
+  "review_status": "NOT reviewed by a licensed lawyer - verify statute text against pakistancode.gov.pk before production use"
+}

@@ -1,0 +1,35 @@
+{
+  "category_id": "IRA-2012-WRONGFUL-TERMINATION",
+  "title": "Wrongful Termination (Industrial/Labor)",
+  "jurisdiction": "Pakistan (Federal/Provincial)",
+  "legal_area": "Labor / Employment",
+  "keywords": ["termination", "dismissal", "wrongful termination", "labor court", "employee rights", "notice period", "severance", "gratuity"],
+  "statute_text": "Governed primarily by the Industrial and Commercial Employment (Standing Orders) Ordinance 1968 and provincial Industrial Relations Acts. Standing Order 12 covers termination simpliciter (termination for reasons other than misconduct, requiring one month's notice or pay in lieu). Standing Order 15 covers dismissal for misconduct, requiring a disciplinary inquiry and opportunity for the employee to respond. Section 33 of the Punjab Industrial Relations Act 2010 sets out the grievance procedure: employee must raise grievance in writing within 3 months of the cause, escalating to Labour Court if unresolved.",
+  "elements_required": [
+    "Employee qualifies as a workman/covered employee under relevant Standing Orders",
+    "Termination lacked valid cause, OR proper procedure was not followed (no notice, no disciplinary inquiry, no opportunity to respond)",
+    "Grievance was raised in writing within the statutory window (commonly 3 months)",
+    "If grievance unresolved, matter referred to Labour Court"
+  ],
+  "common_defenses": [
+    "Termination was for documented cause/misconduct with due process followed",
+    "Employee was on probation with a shorter applicable notice period",
+    "Automatic termination circumstances (contract/project completion)",
+    "Proper notice and severance/gratuity were paid per Standing Orders requirements"
+  ],
+  "procedural_notes": [
+    "Path: internal grievance -> conciliation -> Labour Court (if unresolved)",
+    "Non-workman (managerial) employees generally pursue wrongful termination via civil suit for breach of contract, not Labour Court",
+    "Public sector employees follow a separate track (Civil Servants Efficiency & Discipline Rules, departmental appeal, Federal Ombudsman)",
+    "Employment law is provincially fragmented - confirm which province's Standing Orders legislation applies"
+  ],
+  "example_scenario": "An employee is dismissed without a written termination letter or disciplinary inquiry, on verbal allegations of poor performance. Since Standing Orders require documented cause and due process for dismissal, the absence of proper procedure is itself a strong ground to challenge the termination as unlawful.",
+  "sources": [
+    "Industrial and Commercial Employment (Standing Orders) Ordinance 1968",
+    "Punjab Industrial Relations Act 2010",
+    "Paycheck.pk labor law summary",
+    "Kakakhel Law Associates",
+    "Lexology - At a glance: termination of employment in Pakistan"
+  ],
+  "review_status": "NOT reviewed by a licensed lawyer - confirm applicable province and current gratuity/notice figures before production use"
+}

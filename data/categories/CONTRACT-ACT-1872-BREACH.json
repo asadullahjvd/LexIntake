@@ -1,0 +1,34 @@
+{
+  "category_id": "CONTRACT-ACT-1872-BREACH",
+  "title": "Breach of Contract / Non-Payment",
+  "jurisdiction": "Pakistan (Federal)",
+  "legal_area": "Civil / Commercial",
+  "keywords": ["breach of contract", "non-payment", "damages", "specific performance", "contract act", "default", "liquidated damages"],
+  "statute_text": "Contract Act 1872, Section 73: When a contract has been broken, the party who suffers by such breach is entitled to receive, from the party who has broken the contract, compensation for any loss or damage caused to him thereby, which naturally arose in the usual course of things from such breach. Section 74: When a contract has been broken, if a sum is named in the contract as the amount to be paid in case of such breach, the party complaining of the breach is entitled to receive reasonable compensation not exceeding the amount so named.",
+  "elements_required": [
+    "A valid, legally binding contract existed (capacity S.11, free consent S.13-17, lawful consideration S.23, certainty of terms S.29)",
+    "Breach occurred - actual (failure to perform by agreed date) or anticipatory (clear indication performance won't happen)",
+    "Claimant was ready and willing to perform their own obligations",
+    "Loss or damage resulted, and is not too remote/indirect"
+  ],
+  "common_defenses": [
+    "No valid contract formed (missing consideration, uncertainty of terms, incapacity)",
+    "Impossibility of performance (Section 38)",
+    "Claimant's own non-performance / lack of readiness and willingness",
+    "Damages claimed are too remote or speculative"
+  ],
+  "procedural_notes": [
+    "Limitation period: 3 years from date of breach (Limitation Act 1908) - verify current schedule",
+    "Civil Procedure Code 1908 (Order II Rule 2) governs suit procedure",
+    "Oral contracts are enforceable if elements of a valid contract are met, but harder to prove",
+    "Specific performance generally not available for personal service/employment contracts"
+  ],
+  "example_scenario": "A contractor abandons a construction project midway despite receiving advance payment. The client sues for damages under Section 73, covering cost of completion by another contractor plus proven delay-related losses, but not speculative future business losses.",
+  "sources": [
+    "Contract Act 1872 (Sections 37, 38, 73, 74)",
+    "Pakistan Legal Services commentary",
+    "Josh and Mak International case-law review",
+    "The Law Studies commentary"
+  ],
+  "review_status": "NOT reviewed by a licensed lawyer - verify statute text against pakistancode.gov.pk before production use"
+}

@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Law Firm — Case Intake</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F2ECDC;
+    --paper-dark:#E8DFC7;
+    --paper-shadow:#D8CDA9;
+    --ink:#1C1A17;
+    --ink-soft:#4A443B;
+    --oxblood:#6E1423;
+    --oxblood-deep:#4E0E19;
+    --forest:#1F3A2E;
+    --forest-deep:#152B21;
+    --brass:#B08D57;
+    --brass-light:#C9AB78;
+    --rule:#C9BFA0;
+    --rule-soft:#DAD1B4;
+    --amber:#8A6A2F;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:
+      radial-gradient(ellipse at top left, rgba(176,141,87,0.06), transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(110,20,35,0.04), transparent 50%),
+      var(--paper);
+    color:var(--ink);
+    font-family:'Source Serif 4', Georgia, serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* paper grain texture */
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    pointer-events:none;
+    z-index:0;
+    opacity:0.35;
+    background-image:
+      repeating-linear-gradient(90deg, rgba(0,0,0,0.012) 0px, transparent 1px, transparent 2px),
+      repeating-linear-gradient(0deg, rgba(0,0,0,0.012) 0px, transparent 1px, transparent 2px);
+  }
+
+  .wrap{max-width:880px; margin:0 auto; padding:0 28px 120px; position:relative; z-index:1;}
+
+  /* ---------- HEADER / DOCKET ---------- */
+  header{
+    padding:56px 0 32px;
+    border-bottom:2px solid var(--ink);
+    margin-bottom:8px;
+  }
+  .docket-row{
+    display:flex; justify-content:space-between; align-items:baseline;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.12em;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    margin-bottom:28px;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .docket-row span:last-child{color:var(--brass); font-weight:600;}
+
+  .crest{
+    display:flex; align-items:center; gap:18px; margin-bottom:14px;
+  }
+  .crest svg{flex-shrink:0;}
+
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(38px, 6vw, 58px);
+    letter-spacing:-0.01em;
+    margin:0;
+    line-height:1.02;
+    color:var(--ink);
+  }
+  .subtitle{
+    font-family:'Source Serif 4', serif;
+    font-style:italic;
+    font-size:17px;
+    color:var(--ink-soft);
+    margin:10px 0 0;
+    max-width:52ch;
+  }
+
+  /* ---------- SECTION LABEL ---------- */
+  .section-label{
+    display:flex; align-items:center; gap:14px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--brass);
+    font-weight:600;
+    margin:52px 0 18px;
+  }
+  .section-label::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--rule);
+  }
+
+  /* ---------- INTAKE FORM ---------- */
+  .intake-card{
+    background:var(--paper-dark);
+    border:1px solid var(--rule);
+    padding:32px;
+    position:relative;
+  }
+  .intake-card::before{
+    content:"";
+    position:absolute; top:10px; left:10px; right:10px; bottom:10px;
+    border:1px solid var(--rule-soft);
+    pointer-events:none;
+  }
+
+  label.field-label{
+    display:block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:10px;
+  }
+
+  textarea{
+    width:100%;
+    min-height:150px;
+    background:var(--paper);
+    border:1px solid var(--rule);
+    border-radius:0;
+    padding:18px;
+    font-family:'Source Serif 4', serif;
+    font-size:16px;
+    color:var(--ink);
+    resize:vertical;
+    outline:none;
+    transition:border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  textarea::placeholder{color:#9C927C; font-style:italic;}
+  textarea:focus{
+    border-color:var(--brass);
+    box-shadow:0 0 0 3px rgba(176,141,87,0.15);
+  }
+
+  .doc-type-hint{
+    margin-top:12px;
+    font-size:13px;
+    color:var(--ink-soft);
+    font-family:'Source Serif 4', serif;
+  }
+  .doc-type-hint b{color:var(--ink); font-weight:600;}
+
+  .email-field{
+    margin-top:16px;
+  }
+  .email-field input{
+    width:100%;
+    background:var(--paper);
+    border:1px solid var(--rule);
+    padding:12px 14px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    color:var(--ink);
+    outline:none;
+  }
+  .email-field input:focus{
+    border-color:var(--brass);
+    box-shadow:0 0 0 3px rgba(176,141,87,0.15);
+  }
+  .email-field .field-label{margin-bottom:8px;}
+
+  .actions{
+    display:flex; align-items:center; gap:18px;
+    margin-top:22px;
+    flex-wrap:wrap;
+  }
+
+  button.submit-btn{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    font-weight:600;
+    color:var(--paper);
+    background:var(--ink);
+    border:none;
+    padding:16px 30px;
+    cursor:pointer;
+    position:relative;
+    transition:background 0.2s ease, transform 0.1s ease;
+  }
+  button.submit-btn:hover{background:var(--oxblood-deep);}
+  button.submit-btn:active{transform:translateY(1px);}
+  button.submit-btn:disabled{opacity:0.5; cursor:not-allowed;}
+
+  .api-config{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--ink-soft);
+  }
+  .api-config input{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    background:transparent;
+    border:none;
+    border-bottom:1px dashed var(--rule);
+    color:var(--ink-soft);
+    padding:2px 4px;
+    width:200px;
+    outline:none;
+  }
+  .api-config input:focus{border-bottom-color:var(--brass);}
+
+  /* ---------- LOADING ---------- */
+  .loading-strip{
+    display:none;
+    align-items:center; gap:14px;
+    margin-top:24px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.08em;
+    color:var(--ink-soft);
+  }
+  .loading-strip.active{display:flex;}
+  .gavel-spin{
+    width:16px; height:16px;
+    border:2px solid var(--rule);
+    border-top-color:var(--brass);
+    border-radius:50%;
+    animation:spin 0.9s linear infinite;
+  }
+  @keyframes spin{to{transform:rotate(360deg);}}
+
+  /* ---------- ERROR ---------- */
+  .error-box{
+    display:none;
+    margin-top:20px;
+    padding:16px 18px;
+    background:rgba(110,20,35,0.06);
+    border-left:3px solid var(--oxblood);
+    font-size:14px;
+    color:var(--oxblood-deep);
+  }
+  .error-box.active{display:block;}
+
+  /* ---------- RESULTS ---------- */
+  #results{display:none;}
+  #results.active{display:block;}
+
+  .clarify-card{
+    background:var(--paper-dark);
+    border:1px solid var(--brass);
+    padding:28px 32px;
+    margin-top:8px;
+  }
+  .clarify-card .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--brass);
+    margin-bottom:10px;
+    display:block;
+  }
+  .clarify-card p{font-size:17px; margin:0; font-style:italic;}
+
+  /* case summary strip */
+  .case-meta{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(140px, 1fr));
+    gap:1px;
+    background:var(--rule);
+    border:1px solid var(--rule);
+    margin-bottom:6px;
+  }
+  .case-meta div{
+    background:var(--paper);
+    padding:16px 18px;
+  }
+  .case-meta .meta-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:9.5px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:6px;
+  }
+  .case-meta .meta-value{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    font-weight:600;
+    color:var(--ink);
+  }
+
+  /* ---------- VERDICT SEAL ---------- */
+  .verdict-stage{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:48px 0 36px;
+    position:relative;
+  }
+  .seal{
+    width:150px; height:150px;
+    border-radius:50%;
+    display:flex; flex-direction:column;
+    align-items:center; justify-content:center;
+    color:var(--paper);
+    font-family:'IBM Plex Mono', monospace;
+    text-align:center;
+    box-shadow:
+      inset 0 0 0 4px rgba(255,255,255,0.08),
+      inset 0 6px 18px rgba(0,0,0,0.35),
+      0 10px 30px rgba(0,0,0,0.25);
+    transform:scale(0) rotate(-18deg);
+    opacity:0;
+    position:relative;
+  }
+  .seal.stamp-in{
+    animation:stampDown 0.55s cubic-bezier(.2,1.4,.4,1) forwards;
+  }
+  @keyframes stampDown{
+    0%{transform:scale(2.2) rotate(-18deg); opacity:0;}
+    55%{transform:scale(0.92) rotate(-4deg); opacity:1;}
+    75%{transform:scale(1.06) rotate(-7deg);}
+    100%{transform:scale(1) rotate(-6deg); opacity:1;}
+  }
+  .seal.compliant{background:radial-gradient(circle at 35% 30%, var(--forest) 0%, var(--forest-deep) 75%);}
+  .seal.non-compliant{background:radial-gradient(circle at 35% 30%, var(--oxblood) 0%, var(--oxblood-deep) 75%);}
+  .seal .seal-ring{
+    position:absolute; inset:9px;
+    border:1.5px solid rgba(255,255,255,0.35);
+    border-radius:50%;
+  }
+  .seal .scales{margin-bottom:6px;}
+  .seal .verdict-word{
+    font-size:13px;
+    letter-spacing:0.14em;
+    font-weight:600;
+    text-transform:uppercase;
+  }
+  .seal .verdict-sub{
+    font-size:8.5px;
+    letter-spacing:0.12em;
+    opacity:0.75;
+    margin-top:3px;
+    text-transform:uppercase;
+  }
+
+  .risk-badge{
+    margin-top:18px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    padding:6px 14px;
+    border:1px solid currentColor;
+  }
+  .risk-badge.high{color:var(--oxblood);}
+  .risk-badge.medium{color:var(--amber);}
+  .risk-badge.low{color:var(--forest);}
+
+  /* ---------- CONTENT BLOCKS ---------- */
+  .block{
+    padding:28px 0;
+    border-bottom:1px solid var(--rule);
+  }
+  .block:last-child{border-bottom:none;}
+
+  .block h2{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:22px;
+    margin:0 0 14px;
+    color:var(--ink);
+  }
+  .block h2 .num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    color:var(--brass);
+    margin-right:10px;
+    font-weight:600;
+  }
+
+  .plain-summary{font-size:17px; color:var(--ink); margin:0 0 16px;}
+  .key-takeaway{
+    font-family:'Source Serif 4', serif;
+    font-style:italic;
+    font-size:16px;
+    color:var(--oxblood-deep);
+    background:rgba(110,20,35,0.05);
+    border-left:3px solid var(--brass);
+    padding:14px 18px;
+    margin:0 0 18px;
+  }
+
+  ul.step-list{list-style:none; margin:0; padding:0;}
+  ul.step-list li{
+    display:flex; gap:14px;
+    padding:10px 0;
+    font-size:15.5px;
+    border-top:1px dashed var(--rule-soft);
+  }
+  ul.step-list li:first-child{border-top:none;}
+  ul.step-list li::before{
+    content:"§";
+    font-family:'Fraunces', serif;
+    color:var(--brass);
+    font-weight:600;
+    flex-shrink:0;
+  }
+
+  /* violations / issues */
+  .issue-card{
+    background:var(--paper-dark);
+    border-left:3px solid var(--oxblood);
+    padding:16px 20px;
+    margin-bottom:12px;
+  }
+  .issue-card.low{border-left-color:var(--brass);}
+  .issue-card .issue-top{
+    display:flex; justify-content:space-between; align-items:baseline;
+    margin-bottom:6px;
+    gap:10px; flex-wrap:wrap;
+  }
+  .issue-card .issue-rule{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--ink-soft);
+  }
+  .issue-card .sev{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    font-weight:600;
+  }
+  .sev.high{color:var(--oxblood);}
+  .sev.medium{color:var(--amber);}
+  .sev.low{color:var(--forest);}
+  .issue-card p{margin:0; font-size:15px;}
+  .redline-suggest{
+    margin-top:10px;
+    padding-top:10px;
+    border-top:1px dotted var(--rule);
+    font-size:14px;
+    color:var(--forest-deep);
+  }
+  .redline-suggest b{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--brass);
+    display:block;
+    margin-bottom:4px;
+  }
+
+  /* deadlines */
+  .deadline-row{
+    display:grid;
+    grid-template-columns:120px 1fr;
+    gap:16px;
+    padding:14px 0;
+    border-top:1px dashed var(--rule-soft);
+    align-items:start;
+  }
+  .deadline-row:first-child{border-top:none;}
+  .deadline-days{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:22px;
+    font-weight:600;
+    color:var(--brass);
+    line-height:1;
+  }
+  .deadline-days small{
+    display:block;
+    font-size:9.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-top:4px;
+    font-weight:400;
+  }
+  .deadline-info .dtype{font-weight:600; font-size:15px; margin-bottom:3px;}
+  .deadline-info .dref{font-size:13px; color:var(--ink-soft); font-style:italic;}
+
+  /* drafted document — parchment look */
+  .parchment{
+    background:
+      linear-gradient(var(--paper) 0%, var(--paper) 100%);
+    border:1px solid var(--rule);
+    box-shadow:0 2px 0 var(--paper-shadow), 0 4px 0 var(--rule-soft);
+    padding:36px 40px;
+    font-family:'Source Serif 4', serif;
+    position:relative;
+    margin-top:4px;
+  }
+  .parchment .doc-title{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:20px;
+    text-align:center;
+    margin:0 0 4px;
+  }
+  .parchment .doc-kind{
+    text-align:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--brass);
+    margin-bottom:22px;
+  }
+  .parchment .doc-body{
+    white-space:pre-wrap;
+    font-size:15.5px;
+    line-height:1.85;
+    color:var(--ink);
+  }
+  .doc-notes{
+    margin-top:20px;
+    padding-top:16px;
+    border-top:1px dashed var(--rule);
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+  .doc-notes b{color:var(--ink); font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.08em; text-transform:uppercase;}
+
+  .disclaimer{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--ink-soft);
+    margin-top:14px;
+    padding-top:14px;
+    border-top:1px solid var(--rule-soft);
+    line-height:1.7;
+  }
+
+  /* rule reference chip */
+  .rule-chip{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--forest-deep);
+    background:rgba(31,58,46,0.06);
+    border:1px solid rgba(31,58,46,0.25);
+    padding:6px 12px;
+    margin-bottom:6px;
+  }
+
+  footer{
+    margin-top:80px;
+    padding-top:24px;
+    border-top:2px solid var(--ink);
+    display:flex; justify-content:space-between; align-items:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    flex-wrap:wrap; gap:10px;
+  }
+
+  @media (max-width:640px){
+    .wrap{padding:0 18px 90px;}
+    header{padding:36px 0 24px;}
+    .intake-card{padding:22px;}
+    .parchment{padding:26px 20px;}
+    .actions{flex-direction:column; align-items:stretch;}
+    button.submit-btn{width:100%;}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <div class="docket-row">
+      <span>Case Intake &amp; Compliance Review System</span>
+      <span id="docketNumber">DOCKET — PENDING</span>
+    </div>
+    <div class="crest">
+      <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
+        <path d="M23 4V42" stroke="#1C1A17" stroke-width="2"/>
+        <path d="M23 8L10 14L23 8L36 14" stroke="#1C1A17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10 14L4 26H16L10 14Z" stroke="#B08D57" stroke-width="1.6" stroke-linejoin="round" fill="none"/>
+        <path d="M36 14L30 26H42L36 14Z" stroke="#B08D57" stroke-width="1.6" stroke-linejoin="round" fill="none"/>
+        <path d="M4 26C4 29.3 7 31 10 31C13 31 16 29.3 16 26" stroke="#B08D57" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M30 26C30 29.3 33 31 36 31C39 31 42 29.3 42 26" stroke="#B08D57" stroke-width="1.6" stroke-linecap="round"/>
+        <rect x="12" y="40" width="22" height="2.2" fill="#1C1A17"/>
+        <rect x="22" y="8" width="2" height="34" fill="#1C1A17"/>
+      </svg>
+      <h1>AI&nbsp;Law&nbsp;Firm</h1>
+    </div>
+    <p class="subtitle">State your matter in your own words. The system determines the filing type, matches it to the governing law, and returns a reasoned finding.</p>
+  </header>
+
+  <section class="section-label">Statement of Matter</section>
+
+  <div class="intake-card">
+    <label class="field-label" for="clientMessage">Describe your situation, or paste a contract / notice for review</label>
+    <textarea id="clientMessage" placeholder="e.g. My landlord changed the locks on my shop without giving written notice, even though I've paid rent on time for three years..."></textarea>
+    <p class="doc-type-hint">The system will determine on its own whether this is a <b>dispute</b>, a <b>contract for review</b>, or a <b>notice you've received</b> — no need to specify.</p>
+
+    <div class="email-field">
+      <label class="field-label" for="clientEmail">Email for deadline alerts (optional)</label>
+      <input type="email" id="clientEmail" placeholder="you@example.com" spellcheck="false">
+    </div>
+
+    <div class="actions">
+      <button class="submit-btn" id="submitBtn" onclick="submitCase()">File Statement →</button>
+      <div class="api-config">
+        API: <input type="text" id="apiUrl" value="http://localhost:8000/check-document" spellcheck="false">
+      </div>
+    </div>
+
+    <div class="loading-strip" id="loadingStrip">
+      <div class="gavel-spin"></div>
+      <span id="loadingText">Reviewing submission…</span>
+    </div>
+
+    <div class="error-box" id="errorBox"></div>
+  </div>
+
+  <div id="results"></div>
+
+  <footer>
+    <span>AI-assisted legal reference — not legal advice</span>
+    <span id="timestamp"></span>
+  </footer>
+
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+
+function setLoading(active, text){
+  $('loadingStrip').classList.toggle('active', active);
+  $('loadingText').textContent = text || 'Reviewing submission…';
+  $('submitBtn').disabled = active;
+}
+
+function showError(msg){
+  const box = $('errorBox');
+  box.textContent = msg;
+  box.classList.add('active');
+}
+function clearError(){
+  $('errorBox').classList.remove('active');
+  $('errorBox').textContent = '';
+}
+
+function newDocketNumber(){
+  const n = Math.floor(1000 + Math.random()*8999);
+  const year = new Date().getFullYear();
+  return `DOCKET NO. ${year}-AI-${n}`;
+}
+
+function esc(s){
+  const d = document.createElement('div');
+  d.textContent = s ?? '';
+  return d.innerHTML;
+}
+
+async function submitCase(){
+  clearError();
+  const message = $('clientMessage').value.trim();
+  if(!message){
+    showError('Please describe your matter before filing.');
+    return;
+  }
+  const apiUrl = $('apiUrl').value.trim();
+  const clientEmail = $('clientEmail').value.trim();
+  $('results').classList.remove('active');
+  $('results').innerHTML = '';
+  setLoading(true, 'Reviewing submission…');
+
+  try{
+    const res = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        raw_user_message: message,
+        client_email: clientEmail || null
+      })
+    });
+    if(!res.ok){
+      throw new Error(`Server responded ${res.status}`);
+    }
+    const data = await res.json();
+    setLoading(false);
+    render(data);
+  }catch(err){
+    setLoading(false);
+    showError(`Could not reach the review system (${err.message}). Confirm the API URL above matches your running backend (uvicorn app.main:app), or try the demo below.`);
+  }
+}
+
+function render(data){
+  $('docketNumber').textContent = newDocketNumber();
+  $('timestamp').textContent = new Date().toLocaleString();
+
+  const results = $('results');
+  results.innerHTML = '';
+
+  if(data.needs_clarification){
+    results.innerHTML = `
+      <section class="section-label">Clarification Required</section>
+      <div class="clarify-card">
+        <span class="tag">The clerk requires more information</span>
+        <p>${esc(data.clarification_question)}</p>
+      </div>`;
+    results.classList.add('active');
+    return;
+  }
+
+  const intake = data.intake_result || {};
+  const rule = data.rule_document;
+  const compliance = data.compliance_result;
+  const redline = data.redline_result;
+  const deadlines = data.deadline_result;
+  const drafted = data.drafted_document;
+  const summary = data.client_summary;
+
+  let html = '';
+
+  // --- Case meta strip ---
+  html += `<section class="section-label">Case Summary</section>`;
+  html += `<div class="case-meta">
+    <div><div class="meta-label">Filing Type</div><div class="meta-value">${esc((intake.document_type||'—').replace(/_/g,' '))}</div></div>
+    <div><div class="meta-label">Client Role</div><div class="meta-value">${esc(intake.client_role||'—')}</div></div>
+    <div><div class="meta-label">Jurisdiction</div><div class="meta-value">${esc(intake.jurisdiction||'Not specified')}</div></div>
+    <div><div class="meta-label">Statute Matched</div><div class="meta-value">${rule ? esc(rule.category_id) : 'No confident match'}</div></div>
+  </div>`;
+
+  if(data.no_confident_match){
+    html += `<div class="block"><p style="font-style:italic;color:var(--ink-soft);">No rule category in the current corpus matched this filing with sufficient confidence. This matter has been flagged for human review rather than an automated finding.</p></div>`;
+    results.innerHTML = html;
+    results.classList.add('active');
+    return;
+  }
+
+  // --- Verdict seal ---
+  if(compliance){
+    const isCompliant = compliance.compliant;
+    html += `
+    <div class="verdict-stage">
+      <div class="seal ${isCompliant ? 'compliant' : 'non-compliant'}" id="verdictSeal">
+        <div class="seal-ring"></div>
+        <svg class="scales" width="34" height="34" viewBox="0 0 34 34" fill="none">
+          <path d="M17 4V30" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M6 9H28" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M6 9L2 16C2 18.5 4.5 20 6.5 20C8.5 20 11 18.5 11 16L6 9Z" stroke="white" stroke-width="1.4" stroke-linejoin="round"/>
+          <path d="M28 9L24 16C24 18.5 26.5 20 28.5 20C30.5 20 33 18.5 33 16L28 9Z" stroke="white" stroke-width="1.4" stroke-linejoin="round"/>
+          <path d="M11 31H23" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <div class="verdict-word">${isCompliant ? 'Compliant' : 'Non-Compliant'}</div>
+        <div class="verdict-sub">${esc(rule.title)}</div>
+      </div>
+    </div>`;
+  } else if(redline){
+    html += `
+    <div class="verdict-stage">
+      <div class="seal ${redline.overall_risk === 'low' ? 'compliant' : 'non-compliant'}" id="verdictSeal">
+        <div class="seal-ring"></div>
+        <svg class="scales" width="34" height="34" viewBox="0 0 34 34" fill="none">
+          <path d="M17 4V30" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M6 9H28" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M6 9L2 16C2 18.5 4.5 20 6.5 20C8.5 20 11 18.5 11 16L6 9Z" stroke="white" stroke-width="1.4" stroke-linejoin="round"/>
+          <path d="M28 9L24 16C24 18.5 26.5 20 28.5 20C30.5 20 33 18.5 33 16L28 9Z" stroke="white" stroke-width="1.4" stroke-linejoin="round"/>
+          <path d="M11 31H23" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <div class="verdict-word">${esc(redline.overall_risk)} Risk</div>
+        <div class="verdict-sub">Contract Review</div>
+      </div>
+    </div>`;
+  }
+
+  // --- Plain summary ---
+  if(summary){
+    html += `<div class="block">
+      <h2><span class="num">§1</span>Finding, in Plain Terms</h2>
+      <p class="plain-summary">${esc(summary.plain_summary)}</p>
+      <div class="key-takeaway">${esc(summary.key_takeaway)}</div>
+      <ul class="step-list">
+        ${(summary.next_steps||[]).map(s => `<li>${esc(s)}</li>`).join('')}
+      </ul>
+    </div>`;
+  }
+
+  // --- Compliance violations ---
+  if(compliance && compliance.violations && compliance.violations.length){
+    html += `<div class="block">
+      <h2><span class="num">§2</span>Findings Against the Statute</h2>
+      <div class="rule-chip">⚖ ${esc(rule.category_id)}</div>
+      ${compliance.violations.map(v => `
+        <div class="issue-card">
+          <div class="issue-top">
+            <span class="issue-rule">${esc(v.element_or_rule)}</span>
+            <span class="sev ${esc(v.severity)}">${esc(v.severity)}</span>
+          </div>
+          <p>${esc(v.issue)}</p>
+        </div>`).join('')}
+      ${(compliance.missing_elements||[]).length ? `
+        <div class="issue-card low">
+          <div class="issue-top"><span class="issue-rule">Missing Elements</span></div>
+          <p>${compliance.missing_elements.map(esc).join(' · ')}</p>
+        </div>` : ''}
+    </div>`;
+  }
+
+  // --- Redline issues ---
+  if(redline){
+    html += `<div class="block">
+      <h2><span class="num">§2</span>Clause-by-Clause Review</h2>
+      ${redline.issues.map(i => `
+        <div class="issue-card">
+          <div class="issue-top">
+            <span class="issue-rule">"${esc(i.clause_excerpt)}"</span>
+            <span class="sev ${esc(i.risk_level)}">${esc(i.risk_level)}</span>
+          </div>
+          <p>${esc(i.issue)}</p>
+          <div class="redline-suggest">
+            <b>Suggested Redline</b>
+            ${esc(i.suggested_redline)}
+          </div>
+        </div>`).join('')}
+      ${(redline.missing_protections||[]).length ? `
+        <div class="issue-card low">
+          <div class="issue-top"><span class="issue-rule">Missing Protections</span></div>
+          <p>${redline.missing_protections.map(esc).join(' · ')}</p>
+        </div>` : ''}
+    </div>`;
+  }
+
+  // --- Deadlines ---
+  if(deadlines && deadlines.deadlines && deadlines.deadlines.length){
+    html += `<div class="block">
+      <h2><span class="num">§3</span>Procedural Deadlines</h2>
+      ${deadlines.deadlines.map(d => `
+        <div class="deadline-row">
+          <div class="deadline-days">${d.days_from_reference ?? '—'}<small>days</small></div>
+          <div class="deadline-info">
+            <div class="dtype">${esc(d.deadline_type)}</div>
+            <div class="dref">from ${esc(d.reference_event)}</div>
+            <div style="margin-top:6px;font-size:14px;">${esc(d.description)}</div>
+          </div>
+        </div>`).join('')}
+      <div class="disclaimer">${esc(deadlines.disclaimer)}</div>
+    </div>`;
+  }
+
+  // --- Drafted document ---
+  if(drafted){
+    html += `<div class="block">
+      <h2><span class="num">§4</span>Prepared Document</h2>
+      <div class="parchment">
+        <div class="doc-title">${esc(drafted.title)}</div>
+        <div class="doc-kind">${esc(drafted.document_type)} — drafted for ${esc(drafted.drafted_for_role)}</div>
+        <div class="doc-body">${esc(drafted.body)}</div>
+        ${(drafted.drafting_notes||[]).length ? `
+          <div class="doc-notes"><b>Before Sending</b><br>${drafted.drafting_notes.map(esc).join(' · ')}</div>` : ''}
+      </div>
+      <div class="disclaimer">${esc(drafted.disclaimer)}</div>
+    </div>`;
+  }
+
+  results.innerHTML = html;
+  results.classList.add('active');
+
+  // trigger seal stamp animation after paint
+  requestAnimationFrame(() => {
+    const seal = $('verdictSeal');
+    if(seal){
+      setTimeout(() => seal.classList.add('stamp-in'), 80);
+    }
+  });
+
+  results.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+// allow Ctrl/Cmd+Enter to submit
+$('clientMessage').addEventListener('keydown', (e) => {
+  if((e.ctrlKey || e.metaKey) && e.key === 'Enter') submitCase();
+});
+</script>
+
+</body>
+</html>

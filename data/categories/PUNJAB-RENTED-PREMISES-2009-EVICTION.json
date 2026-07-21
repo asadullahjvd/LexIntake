@@ -1,0 +1,35 @@
+{
+  "category_id": "PUNJAB-RENTED-PREMISES-2009-EVICTION",
+  "title": "Tenancy Eviction (Punjab)",
+  "jurisdiction": "Punjab, Pakistan",
+  "legal_area": "Civil / Landlord-Tenant",
+  "keywords": ["eviction", "tenant", "landlord", "rent", "tenancy", "rented premises", "rent tribunal", "lease"],
+  "statute_text": "Punjab Rented Premises Act 2009, Section 15 - Grounds for eviction: A landlord may seek eviction of the tenant if the tenant has failed to pay or tender rent within 30 days after the stipulated period; the tenant has breached a term or condition of the tenancy agreement; the tenant has violated an obligation under Section 13; the tenant has used the premises for a purpose other than agreed, or sub-let without written consent; the tenancy period has expired; or the landlord genuinely requires the premises for personal use.",
+  "elements_required": [
+    "Valid tenancy relationship exists (written agreement strongly preferred)",
+    "At least one statutory ground under Section 15 is met",
+    "Landlord issued written notice stating grounds and a compliance/vacate period",
+    "Landlord files an eviction application with the Rent Tribunal if tenant does not comply"
+  ],
+  "common_defenses": [
+    "Eviction grounds are invalid or unproven - landlord must present clear evidence",
+    "Alleged breach has been rectified (e.g., overdue rent has since been paid)",
+    "Landlord failed to strictly follow notice requirements",
+    "Dispute over whether a valid tenancy relationship exists at all"
+  ],
+  "procedural_notes": [
+    "Rent Tribunals (established per district) have exclusive jurisdiction - not ordinary civil courts",
+    "Tenant may seek leave to contest; if granted, treated as written reply",
+    "Eviction cannot occur without a Rent Tribunal order",
+    "Appeal to District Court generally available (commonly cited ~30 days - verify)",
+    "Unregistered tenancy agreements can still support an eviction petition but may carry a penalty"
+  ],
+  "example_scenario": "A tenant stops paying rent for two months, citing a dispute over property repairs. The landlord issues written notice, the tenant fails to cure within the notice period, and the landlord files an eviction petition. Non-payment remains a valid statutory ground even if the tenant has a separate claim against the landlord for repairs.",
+  "sources": [
+    "Punjab Rented Premises Act 2009 (punjablaws.gov.pk)",
+    "Khalid Zafar & Associates",
+    "Adalat Online",
+    "24Justice.pk eviction guides"
+  ],
+  "review_status": "NOT reviewed by a licensed lawyer - Punjab only, other provinces have separate statutes - verify current notice/appeal periods"
+}
