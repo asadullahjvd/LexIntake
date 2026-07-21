@@ -1,0 +1,34 @@
+{
+  "category_id": "WORKMENS-COMPENSATION-ACT-1923",
+  "title": "Workplace Injury Compensation Claims",
+  "jurisdiction": "Punjab, Pakistan",
+  "legal_area": "Labor / Employment",
+  "keywords": ["workplace injury", "employment accident", "workmen compensation", "occupational disease", "employer liability", "work-related death"],
+  "statute_text": "Workmen's Compensation Act 1923, Section 3: if personal injury is caused to a workman by accident arising out of and in the course of his employment, the employer is liable to pay compensation. Employer's liability under the Act is of an absolute nature (not dependent on proving employer negligence, unlike a tort claim), though payment is capped by the ceiling fixed in the Act's Schedule. Section 17: any contract or agreement where a workman relinquishes his right to compensation is null and void to that extent - workers cannot validly waive this statutory protection.",
+  "elements_required": [
+    "Claimant qualifies as a 'workman' under the Act's definition (not an officer/managerial employee)",
+    "Personal injury (or occupational disease listed in the Act) was caused",
+    "Injury arose 'out of and in the course of employment' - both elements needed: connected to the work itself, and occurring during employment",
+    "Claim falls within the Act's age/scope parameters (adult status under this Act begins at 15, notably different from general adult age of majority)"
+  ],
+  "common_defenses": [
+    "Injury did not arise 'out of and in the course of' employment - e.g., occurred outside working hours or premises, or was unconnected to work duties",
+    "Injury resulted from a natural disability, not a workplace accident",
+    "Claimant does not qualify as a 'workman' under the Act's definition",
+    "Any contractual waiver of compensation rights is void under Section 17 and cannot be raised as a defense by the employer"
+  ],
+  "procedural_notes": [
+    "Confirmed applicable in Punjab via Punjab's official law portal (punjablaws.gov.pk) - note this Act has been separately repealed and replaced in Khyber Pakhtunkhwa by the KP Workers' Compensation Act 2013, so it is NOT uniformly in force across all of Pakistan; confirm Punjab-specific applicability for any given case",
+    "Employer liability is absolute (strict liability) - claimant does not need to prove employer negligence, unlike an ordinary tort/negligence claim",
+    "Compensation amount is capped by Schedule to the Act, based on nature/severity of injury (e.g., specific amounts for amputation, loss of function)",
+    "Section 13: if a third party (not the employer) is actually legally responsible for the injury, the employer who paid compensation may seek indemnity from that third party"
+  ],
+  "example_scenario": "A factory worker loses partial use of a hand in a machinery accident during his shift. Since the injury arose out of and in the course of his employment, the employer is liable to pay compensation per the Schedule's fixed amount for that type of injury, regardless of whether the employer was at fault - this is different from having to prove employer negligence in an ordinary injury claim.",
+  "sources": [
+    "Workmen's Compensation Act 1923 (VIII of 1923), Sections 3, 13, 17 - confirmed via official Punjab Laws portal (punjablaws.gov.pk/laws/29a.html) and Pakistan Code (pakistancode.gov.pk)",
+    "nasirlawsite.com - Workmen's Compensation Act summary",
+    "Khalid Zafar & Associates - Workmen's Compensation Act 1923 summary",
+    "Khyber Pakhtunkhwa Workers' Compensation Act 2013 (confirms this 1923 Act was repealed in KP specifically, implying continued force elsewhere including Punjab)"
+  ],
+  "review_status": "NOT reviewed by a licensed lawyer - confirm this Act (not a replaced provincial version) is currently in force for the specific case's location within Punjab before relying on it; verify current compensation Schedule amounts against pakistancode.gov.pk"
+}

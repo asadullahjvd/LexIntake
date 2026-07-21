@@ -1,0 +1,34 @@
+{
+  "category_id": "PARTNERSHIP-ACT-1932",
+  "title": "Partnership Disputes (Firm Formation, Dissolution, Partner Liability)",
+  "jurisdiction": "Pakistan (Federal)",
+  "legal_area": "Civil / Commercial",
+  "keywords": ["partnership dispute", "firm dissolution", "partner liability", "partnership deed", "partnership act", "outgoing partner", "profit sharing"],
+  "statute_text": "Partnership Act 1932, Section 4: partnership is the relation between persons who have agreed to share the profits of a business carried on by all or any of them acting for all. Section 13(b): in the absence of a partnership agreement specifying otherwise, partners share profits equally and contribute equally to losses. Section 31: an incoming partner does not become liable to the firm's creditors for anything done before he became a partner, unless he expressly agrees to assume such liability. The Act extends to the whole of Pakistan; a partnership may have a maximum of 20 partners in Pakistan.",
+  "elements_required": [
+    "An agreement (written or oral) existed between two or more persons to share profits of a business carried on by all or any acting for all",
+    "For disputes over profit/loss sharing: no specific agreement exists, triggering the default equal-sharing rule under Section 13(b)",
+    "For incoming/outgoing partner liability disputes: identify the specific date the person became/ceased being a partner, since liability generally does not extend retroactively without express agreement",
+    "For registered firms: relevant notices (change in constitution, dissolution) were or were not properly filed with the Registrar of Firms"
+  ],
+  "common_defenses": [
+    "No valid partnership existed - the arrangement was actually employment, a loan, or another relationship, not a profit-sharing partnership",
+    "Partner is not liable for debts/obligations incurred before joining, absent an express agreement to assume such liability (Section 31)",
+    "Partnership was already dissolved (e.g., by notice, in a partnership-at-will) before the disputed transaction occurred",
+    "Restrictions on the firm's business scope: partners are barred from carrying on any competing business without consent, but a partner may argue their outside business falls outside this restriction"
+  ],
+  "procedural_notes": [
+    "Federal law - applies uniformly across Pakistan including Punjab",
+    "Registration of a firm with the Registrar of Firms is not mandatory for a partnership to exist, but unregistered firms face restrictions on their ability to sue third parties in court - registration matters procedurally even if not substantively required",
+    "'Partnership at-will' (no fixed duration agreed) can be dissolved by any partner giving notice to all other partners; 'particular partnership' (for a specific undertaking) dissolves automatically on completion of that undertaking",
+    "A continuing guarantee given to or by a firm is, absent contrary agreement, automatically revoked as to future transactions upon any change in the firm's constitution (Section 38) - relevant when partners join or leave"
+  ],
+  "example_scenario": "Two people run a shop together with no written partnership deed. One contributes more capital but they never discussed how losses would be shared. When the business suffers a loss, a dispute arises over each partner's share. Absent any agreement to the contrary, Section 13(b)'s default rule of equal loss-sharing applies regardless of unequal capital contribution, unless the parties can show a different agreement existed.",
+  "sources": [
+    "Partnership Act 1932 (Sections 4, 13, 31, 38, 56-58) - confirmed via official Pakistan Code (pakistancode.gov.pk) and Sindh Judicial Academy PDF (sja.gos.pk)",
+    "Khalid Zafar & Associates - Partnership Act 1932 summary",
+    "Balochistan Law Forum - Partnership Act FAQ",
+    "nasirlawsite.com - Partnership Act full text"
+  ],
+  "review_status": "NOT reviewed by a licensed lawyer - verify current statute text and any provincial amendments against pakistancode.gov.pk before production use"
+}

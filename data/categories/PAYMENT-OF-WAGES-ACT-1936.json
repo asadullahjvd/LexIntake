@@ -1,0 +1,34 @@
+{
+  "category_id": "PAYMENT-OF-WAGES-ACT-1936",
+  "title": "Wage Deduction & Delayed Payment Disputes",
+  "jurisdiction": "Punjab, Pakistan",
+  "legal_area": "Labor / Employment",
+  "keywords": ["unpaid wages", "delayed salary", "wage deduction", "payment of wages", "salary dispute", "unauthorized deduction"],
+  "statute_text": "Payment of Wages Act 1936, Section 15: an employee (or, per amendment, claims relating to provident fund or gratuity) who has had an unauthorized deduction made from wages, or has experienced delayed payment of wages, may apply to an appointed authority (a Commissioner for Workmen's Compensation or an officer with judicial/civil court experience) to hear and decide the claim. If the claim is upheld, the authority may direct refund of the amount deducted plus compensation of up to ten times the deducted amount, or payment of delayed wages plus compensation (subject to statutory minimum/maximum amounts). The Act was originally federal but was devolved to the provinces after the 18th Constitutional Amendment, and was specifically adapted for Punjab via the Punjab Payment of Wages (Amendment) Act 2014.",
+  "elements_required": [
+    "Claimant is an employed person within the Act's scope (certain classes of persons employed in industry)",
+    "Either: an unauthorized deduction was made from wages (deductions are only permitted for specific listed reasons under the Act), OR wages were paid later than the prescribed wage period",
+    "Application filed with the appropriate appointed authority within the applicable time limit",
+    "For deduction claims specifically: the deduction does not fall within a permitted category (e.g., authorized deductions for goods entrusted to the employee, or amounts the employee is required to account for)"
+  ],
+  "common_defenses": [
+    "The deduction was authorized under the Act (e.g., for loss/damage to goods entrusted to the employee, or accountable money)",
+    "Delay in payment was due to circumstances the authority considers a valid excuse - the Act allows no compensation order for delayed wages if the authority is satisfied the delay was justified",
+    "Claim is malicious or vexatious - the Act itself allows a penalty against claimants found to have filed such claims",
+    "Claimant does not fall within the Act's covered categories of employed persons"
+  ],
+  "procedural_notes": [
+    "Confirmed applicable in Punjab via Punjab's official law portal (punjablaws.gov.pk), adapted specifically for the province by the 2014 amendment",
+    "This is an administrative/quasi-judicial process before an appointed authority (not necessarily an ordinary civil court) - separate from a general breach of contract civil suit",
+    "Compensation for unauthorized deductions can be substantial: up to ten times the deducted amount",
+    "Compensation for delayed wages has statutory minimum and maximum bounds - check current figures, as these are subject to periodic amendment"
+  ],
+  "example_scenario": "An employer deducts a portion of an employee's salary claiming it covers damage to company equipment, without following the Act's procedure for authorized deductions. The employee applies to the appointed authority under Section 15. If the deduction is found unauthorized, the authority can order not just a refund of the deducted amount but compensation up to ten times that amount, which is a significant deterrent against improper deductions.",
+  "sources": [
+    "Payment of Wages Act 1936 (Act No. IV of 1936), Section 15 - confirmed via official Punjab Laws portal (punjablaws.gov.pk/laws/45a.html), noting 2014 Punjab-specific amendment",
+    "Vidhi Judicial Academy - Section 15 commentary",
+    "IJRTI academic study on wage deductions under the Act",
+    "khalidzafar.com PDF of the Act"
+  ],
+  "review_status": "NOT reviewed by a licensed lawyer - verify current compensation amount limits (subject to periodic amendment) and the currently appointed authority for Punjab against punjablaws.gov.pk before production use"
+}
