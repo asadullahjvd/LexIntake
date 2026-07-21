@@ -1,0 +1,34 @@
+{
+  "category_id": "LIMITATION-ACT-1908",
+  "title": "Limitation Period Disputes (Time-Barred Claims)",
+  "jurisdiction": "Pakistan (Federal)",
+  "legal_area": "Civil / Procedural",
+  "keywords": ["limitation period", "time-barred", "statute of limitations", "delay in filing suit", "condonation of delay", "limitation act"],
+  "statute_text": "Limitation Act 1908, Section 3: no suit, appeal, or application filed after the prescribed limitation period shall be entertained, subject to specific provisions of the Act. The First Schedule prescribes different limitation periods for different types of suits (e.g., 90 days for compensation claims for acts done under statutory authority; 6 months to recover possession of immovable property under Specific Relief Act Section 9; other periods vary by suit type). Section 5 allows condonation of delay in appeals/applications (not ordinary suits) if the appellant/applicant shows 'sufficient cause' for not filing within the limitation period.",
+  "elements_required": [
+    "Identify the specific type of suit/application - limitation periods vary significantly by category (First Schedule)",
+    "Determine the correct starting point ('time from which period begins to run') - often a specific triggering event, not simply the date of the underlying wrong",
+    "Confirm whether time has actually expired based on the applicable period",
+    "For delayed appeals/applications only: whether 'sufficient cause' exists for condonation under Section 5 (does not apply to fresh suits)"
+  ],
+  "common_defenses": [
+    "The suit is not actually time-barred once the correct starting date and applicable period are properly calculated",
+    "Section 14: time spent in good-faith litigation before a court lacking jurisdiction can be excluded from the limitation calculation",
+    "Fraud or concealment by the defendant may extend the period in certain circumstances",
+    "For appeals/applications: sufficient cause shown for delay (Section 5) - courts have discretion here, not available for original suits"
+  ],
+  "procedural_notes": [
+    "Federal law - applies uniformly across Pakistan including Punjab",
+    "This is a foundational, cross-cutting law - relevant to almost any civil claim as a threshold procedural check before the substance of a case is even considered",
+    "A suit filed even one day after the limitation period expires can be dismissed on that ground alone, regardless of the merits",
+    "Different limitation periods apply for suits vs. appeals vs. applications - do not assume one uniform period"
+  ],
+  "example_scenario": "A person wants to file a suit to recover possession of a shop from which they were wrongfully dispossessed. Under the Specific Relief Act Section 9 (cross-referenced in the Limitation Act's First Schedule), the limitation period for such a suit is 6 months from the date of dispossession. If more than 6 months have passed, this specific fast-track remedy is time-barred, though other property remedies with different limitation periods (e.g., a full title suit) may still be available.",
+  "sources": [
+    "Limitation Act 1908, Section 3, Section 5, Section 14, First Schedule",
+    "ma-law.org.pk official PDF text of the Act",
+    "24Justice.pk Limitation Act of Pakistan guide",
+    "Khalid Zafar & Associates - Limitation Act 1908 summary"
+  ],
+  "review_status": "NOT reviewed by a licensed lawyer - limitation periods are highly fact- and suit-type-specific; verify the exact applicable period against pakistancode.gov.pk and current case law before relying on this for any real deadline"
+}

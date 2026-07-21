@@ -1,0 +1,34 @@
+{
+  "category_id": "SALE-OF-GOODS-ACT-1930",
+  "title": "Sale of Goods Disputes (Defective/Non-Conforming Goods)",
+  "jurisdiction": "Pakistan (Federal)",
+  "legal_area": "Civil / Commercial",
+  "keywords": ["defective goods", "sale of goods", "warranty", "condition", "merchantable quality", "goods not as described", "rejection of goods", "caveat emptor"],
+  "statute_text": "Sale of Goods Act 1930, Sections 11-17: distinguishes conditions (essential stipulations, breach of which entitles the buyer to reject the goods and treat the contract as repudiated) from warranties (collateral stipulations, breach of which gives rise only to a claim for damages, not rejection). Implied conditions include: the seller has the right to sell the goods (title), goods sold by description must correspond with the description, and where goods are bought for a particular purpose made known to the seller, the goods must be reasonably fit for that purpose. Implied warranties include quiet possession and freedom from undisclosed encumbrances. The Act extends to the whole of Pakistan as federal law.",
+  "elements_required": [
+    "A contract of sale of goods existed (verbal, written, or implied)",
+    "A condition or warranty was breached (implied or express)",
+    "For rejection: the breached term must be a condition (essential), not merely a warranty (collateral)",
+    "Buyer acted within a reasonable time of discovering the defect (delay can be treated as acceptance)"
+  ],
+  "common_defenses": [
+    "Caveat emptor (buyer beware) - traditionally buyer expected to examine goods before purchase, though Sections 14-17 create exceptions",
+    "Buyer already accepted the goods (e.g., used them, or failed to reject within reasonable time)",
+    "Breach was of a warranty, not a condition - limits remedy to damages, not rejection",
+    "Defect did not exist at time of sale / arose after delivery due to buyer's own handling"
+  ],
+  "procedural_notes": [
+    "Federal law - applies uniformly across Pakistan including Punjab",
+    "Distinction between condition and warranty is central and often contract-interpretation-dependent - court decides based on the parties' intent and the term's importance to the contract's main purpose",
+    "Buyer generally has both a right to reject goods (if a condition is breached) and, separately, a right to claim damages",
+    "Sale by sample and sale by description carry their own additional implied conditions"
+  ],
+  "example_scenario": "A buyer orders machinery parts 'as per sample' shown by the seller. On delivery, the parts do not match the sample's specifications and are unusable for the buyer's manufacturing process. The buyer can reject the goods under the implied condition of correspondence with sample/description, provided rejection happens promptly upon discovering the mismatch.",
+  "sources": [
+    "Sale of Goods Act 1930 (Sections 11-17, 62) - text confirmed extends to Pakistan as federal law",
+    "TheLaw.Institute commentary on Sections 11-17",
+    "Lexibal.com commentary on conditions and warranties",
+    "nasirlawsite.com Sale of Goods Act summary"
+  ],
+  "review_status": "NOT reviewed by a licensed lawyer - verify current section numbering and any amendments against pakistancode.gov.pk before production use"
+}

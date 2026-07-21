@@ -1,0 +1,33 @@
+{
+  "category_id": "SPECIFIC-RELIEF-ACT-1877",
+  "title": "Specific Performance & Recovery of Possession",
+  "jurisdiction": "Pakistan (Federal)",
+  "legal_area": "Civil / Property",
+  "keywords": ["specific performance", "recovery of possession", "injunction", "wrongful dispossession", "specific relief act", "possession suit"],
+  "statute_text": "Specific Relief Act 1877, Section 9: a person dispossessed of immovable property without their consent, otherwise than in due course of law, may file a suit to recover possession, and the only defense available to the dispossessor is to show a better title - questions of legal title generally cannot otherwise be raised in this summary remedy. This section is a fast, simplified remedy specifically for wrongful/forcible dispossession, distinct from a full ownership/title suit. The Act also governs specific performance of contracts (compelling a party to actually perform their contractual obligation, rather than just pay damages) and injunctions (preventive relief).",
+  "elements_required": [
+    "For Section 9 possession claims: claimant was in possession of immovable property",
+    "Claimant was dispossessed without their consent and otherwise than through due legal process (i.e., wrongfully/forcibly, not via a court order or lawful process)",
+    "Suit filed within the limitation period (6 months from dispossession per the Limitation Act 1908)",
+    "For specific performance: a valid, enforceable contract exists and damages alone would not be an adequate remedy"
+  ],
+  "common_defenses": [
+    "For Section 9: dispossessor shows better title to the property (the one defense the Act itself allows in this summary proceeding)",
+    "Dispossession did not actually occur without consent, or occurred through due legal process (e.g., pursuant to a valid court order)",
+    "Suit filed beyond the 6-month limitation window - possession suits under Section 9 are time-sensitive",
+    "For specific performance: damages would be an adequate remedy, or the contract itself is not one courts will specifically enforce (e.g., personal service contracts)"
+  ],
+  "procedural_notes": [
+    "Federal law - applies uniformly across Pakistan including Punjab",
+    "Section 9 is a summary, fast-track remedy - it deliberately does NOT allow deep litigation of ownership/title questions, only the fact of wrongful dispossession",
+    "Strict 6-month limitation period applies to Section 9 possession suits specifically - much shorter than ordinary property suits",
+    "A person with a stronger underlying legal claim (e.g., actual title) may still need to pursue a separate, full title suit if the 6-month window for the summary remedy has passed"
+  ],
+  "example_scenario": "A tenant is forcibly locked out of a shop by the landlord without any court order or legal notice. Rather than waiting to pursue a full ownership/tenancy dispute, the tenant can file a Section 9 suit for recovery of possession within 6 months, focusing narrowly on the fact of wrongful dispossession rather than the underlying merits of the tenancy dispute itself.",
+  "sources": [
+    "Specific Relief Act 1877, Section 9",
+    "Limitation Act 1908 First Schedule (cross-referencing Section 9's 6-month period)",
+    "archive.org full text of the Limitation Act 1908 (cross-reference)"
+  ],
+  "review_status": "NOT reviewed by a licensed lawyer - verify current statute text against pakistancode.gov.pk before production use; specific performance provisions in particular need deeper verification beyond what's summarized here"
+}

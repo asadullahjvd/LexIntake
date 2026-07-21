@@ -1,0 +1,33 @@
+{
+  "category_id": "NEGOTIABLE-INSTRUMENTS-ACT-1881-CIVIL",
+  "title": "Negotiable Instruments - Civil Disputes (Promissory Notes, Bills of Exchange)",
+  "jurisdiction": "Pakistan (Federal)",
+  "legal_area": "Civil / Commercial",
+  "keywords": ["promissory note", "bill of exchange", "negotiable instrument", "endorsement", "dishonor civil claim", "presumption of consideration"],
+  "statute_text": "Negotiable Instruments Act 1881, Section 13: a negotiable instrument means a promissory note, bill of exchange, or cheque payable either to order or to bearer. Section 118: raises a presumption (rebuttable) that every negotiable instrument was made/drawn for consideration, and that it was accepted/endorsed for consideration. The Act extends to the whole of Pakistan (confirmed via official State Bank of Pakistan text) and is unaffected by Sections 24 and 35 of the State Bank of Pakistan Act 1956. IMPORTANT SCOPE NOTE: this category covers CIVIL recovery matters under the Act (e.g., suits to recover the amount of a dishonored instrument based on the Section 118 presumption of consideration). It does NOT cover criminal liability for cheque dishonor in Pakistan - that is governed separately by Pakistan Penal Code Section 489-F (see existing PPC-489F-CHEQUE-DISHONOR category), not by NI Act Section 138 (which is an Indian-specific amendment not adopted in Pakistan's version of this Act).",
+  "elements_required": [
+    "A valid negotiable instrument exists (promissory note, bill of exchange, or cheque, per Section 13's definition)",
+    "Claimant is the lawful holder entitled to sue on the instrument",
+    "Instrument was dishonored on presentation, or the underlying obligation remains unpaid",
+    "For the Section 118 presumption to apply: the instrument itself, properly made/drawn/endorsed"
+  ],
+  "common_defenses": [
+    "Rebutting the Section 118 presumption of consideration - defendant may present evidence that no valid consideration actually existed",
+    "Instrument was not properly presented for payment within a reasonable time (relevant to demand instruments)",
+    "Defendant was not the party who actually made/drew/endorsed the instrument (forgery, unauthorized signature)",
+    "The claim is more appropriately a criminal matter under PPC 489-F if dishonest intent in issuing the cheque is alleged - civil and criminal remedies are separate and can run independently"
+  ],
+  "procedural_notes": [
+    "Federal law - applies uniformly across Pakistan including Punjab",
+    "This is the CIVIL recovery route (suing for the money owed) - separate and independent from criminal prosecution under PPC 489-F for cheque dishonor with dishonest intent",
+    "Section 118's presumption of consideration favors the holder of the instrument, but it is rebuttable - the burden shifts to the defendant to disprove it",
+    "A person may pursue both the civil recovery route (this Act) and criminal prosecution (PPC 489-F) simultaneously for the same dishonored cheque, as they address different questions (debt recovery vs. dishonest intent)"
+  ],
+  "example_scenario": "A supplier holds a promissory note signed by a buyer for goods delivered on credit. The buyer fails to pay when the note falls due. The supplier can file a civil suit to recover the amount, relying on Section 118's presumption that the note was made for valid consideration - the buyer would then need to present evidence to rebut that presumption if they wish to dispute owing the money.",
+  "sources": [
+    "Negotiable Instruments Act 1881 (XXVI of 1881), Sections 13, 118 - confirmed via official State Bank of Pakistan PDF (sbp.org.pk)",
+    "nasirlawsite.com - Negotiable Instruments Act summary",
+    "Josh and Mak International - commentary distinguishing NI Act civil presumptions from PPC 489-F criminal liability in Pakistani case law"
+  ],
+  "review_status": "NOT reviewed by a licensed lawyer - deliberately scoped to civil provisions only after confirming Section 138 (criminal cheque dishonor) is an Indian-specific amendment NOT present in Pakistan's version of this Act; verify current statute text against pakistancode.gov.pk before production use"
+}

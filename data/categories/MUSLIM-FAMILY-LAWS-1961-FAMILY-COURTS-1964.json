@@ -1,0 +1,35 @@
+{
+  "category_id": "MUSLIM-FAMILY-LAWS-1961-FAMILY-COURTS-1964",
+  "title": "Family Law Disputes (Divorce, Khula, Maintenance, Custody)",
+  "jurisdiction": "Punjab, Pakistan",
+  "legal_area": "Family",
+  "keywords": ["divorce", "khula", "maintenance", "child custody", "family court", "dissolution of marriage", "muslim family law", "nikah", "talaq"],
+  "statute_text": "Muslim Family Laws Ordinance 1961 (MFLO): codifies key aspects of Muslim personal law including marriage registration requirements, restrictions on polygamy (requiring Arbitration Council permission before a second marriage), and divorce/talaq procedures (requiring notice to the Union Council Chairman, with a 90-day period before divorce becomes effective unless revoked). West Pakistan Family Courts Act 1964: establishes Family Courts with exclusive jurisdiction over dissolution of marriage (including khula), maintenance, restitution of conjugal rights, custody of children, guardianship, and dower - moving these matters out of ordinary civil courts into a specialized, faster forum. The Family Courts Act does not override or affect MFLO provisions; it provides the procedural forum for enforcing them.",
+  "elements_required": [
+    "A valid marriage (nikah) existed between the parties",
+    "For divorce/talaq: proper notice given to the Union Council Chairman as required by MFLO (procedural requirement, separate from the religious pronouncement itself)",
+    "For khula: wife's application to the Family Court seeking dissolution, generally on grounds that the marriage cannot continue within the limits prescribed by law",
+    "For maintenance: an unfulfilled maintenance obligation and a proper application to the Family Court",
+    "Matter falls within Family Court jurisdiction (not ordinary civil court) per the 1964 Act"
+  ],
+  "common_defenses": [
+    "Marriage was never validly registered/solemnized as claimed",
+    "Proper procedural notice (e.g., to Union Council for divorce) was not given, affecting the validity/timing of the divorce",
+    "For maintenance disputes: maintenance was already paid, or the claimed amount is disputed as excessive relative to means/circumstances",
+    "For custody: the child's welfare (the paramount consideration in Pakistani family law) favors a different arrangement than what's being claimed"
+  ],
+  "procedural_notes": [
+    "MFLO was originally federal but was devolved to the provinces after the 18th Constitutional Amendment; it was specifically adapted for Punjab via the Muslim Family Laws (Amendment) Act 2015 - confirms current Punjab-specific applicability",
+    "Family Courts (established under the 1964 Act) have exclusive jurisdiction over these matters - filing in an ordinary civil court would be procedurally improper",
+    "For khula, a wife's application filed in the prescribed form is treated as the plaint itself - no separate suit needs to be filed",
+    "Family Courts are intended to be faster and less procedurally cumbersome than ordinary civil courts, specifically to address historical delays in maintenance and dower recovery"
+  ],
+  "example_scenario": "A wife seeks khula from her husband, citing that the marriage has broken down irretrievably. She files an application with the Family Court (not an ordinary civil court), which under Section 10 of the Family Courts Act is treated as a plaint. The court proceeds to adjudicate the dissolution along with any connected maintenance or dower claims within the same specialized forum.",
+  "sources": [
+    "Muslim Family Laws Ordinance 1961 (VIII of 1961) - confirmed via official Punjab Laws portal (punjablaws.gov.pk/laws/777a.html), noting 2015 Punjab-specific amendment",
+    "West Pakistan Family Courts Act 1964 (W.P. Act No. XXXV of 1964) - official text via molaw.gov.pk",
+    "pklegal.org - List of Family Laws in Pakistan",
+    "Lucy Carroll (1979) academic commentary on MFLO"
+  ],
+  "review_status": "NOT reviewed by a licensed lawyer - family law involves highly sensitive, fact-specific determinations (especially custody and maintenance amounts); verify current statute text and any recent Punjab-specific amendments against punjablaws.gov.pk before production use"
+}

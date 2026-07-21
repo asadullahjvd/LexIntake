@@ -1,0 +1,33 @@
+{
+  "category_id": "TRANSFER-OF-PROPERTY-ACT-1882",
+  "title": "Property Transfer Disputes (Sale, Lease, Mortgage, Gift)",
+  "jurisdiction": "Punjab, Pakistan",
+  "legal_area": "Civil / Property",
+  "keywords": ["property transfer", "mortgage", "lease dispute", "sale of immovable property", "gift of property", "transfer of property act", "leasehold rights"],
+  "statute_text": "Transfer of Property Act 1882 (Act No. IV of 1882), Section 105-106: governs leases of immovable property, defining lessor, lessee, premium, and rent, and setting duration of leases in the absence of a written contract or local usage. Sections 58-104 govern mortgages and charges, defining mortgagor/mortgagee relationships and their respective rights and liabilities. The Act also governs sale, exchange, and gift of immovable property. Confirmed directly via Punjab's official law portal (punjablaws.gov.pk) as an applicable Punjab statute, including provisions allowing the Punjab government to exempt parts of the province from specific sections by notification.",
+  "elements_required": [
+    "A transfer of immovable property occurred or was attempted (sale, lease, mortgage, exchange, or gift)",
+    "For lease disputes: identify whether a written lease exists; in its absence, statutory default duration/notice rules under Section 106 apply",
+    "For mortgage disputes: identify the type of mortgage and the specific rights/liabilities of mortgagor and mortgagee under the relevant sections",
+    "Transfer was made by a person competent to transfer (with transferable interest in the property)"
+  ],
+  "common_defenses": [
+    "No valid transfer occurred - required formalities (e.g., registered instrument for certain leases) were not met",
+    "Lessee/mortgagor breached their own obligations under the lease/mortgage terms first",
+    "Transferor lacked a valid, transferable interest in the property at the time of the purported transfer",
+    "Statutory notice requirements for lease termination were not properly followed by the party seeking to end the lease"
+  ],
+  "procedural_notes": [
+    "A lease of immovable property from year to year, or for a term exceeding one year, or reserving a yearly rent, must generally be made by a registered instrument - unregistered leases of this type may face enforceability issues",
+    "In the absence of a written contract or local usage, Section 106 supplies default lease duration and notice-period rules",
+    "The Punjab government retains statutory power to exempt parts of the province from certain sections (54, 59, 107, 123) by official notification - worth checking for any such notifications relevant to a specific case",
+    "This Act interacts closely with the Registration Act 1908 (for registration requirements) and, for rented premises specifically, the Punjab Rented Premises Act 2009 (see existing PUNJAB-RENTED-PREMISES-2009-EVICTION category) - the two should be read together for tenancy disputes"
+  ],
+  "example_scenario": "A landlord and tenant have only a verbal agreement for a shop lease exceeding one year, with no registered instrument. A dispute arises over the lease's duration. Section 106's default rules (and the lack of a registered instrument for a lease of this length) become directly relevant to determining what duration and notice terms actually apply, separate from whatever the parties informally understood.",
+  "sources": [
+    "Transfer of Property Act 1882 (Act No. IV of 1882) - confirmed via official Punjab Laws portal (punjablaws.gov.pk/laws/8c.html)",
+    "punjab-zameen.gov.pk official PDF of the Act",
+    "Al-Rafay Law Book Publishers commentary (Pakistan-specific edition)"
+  ],
+  "review_status": "NOT reviewed by a licensed lawyer - this is a large, complex Act; the summary above covers only lease and mortgage basics. Verify current section numbering and any Punjab-specific exemption notifications against punjablaws.gov.pk before production use"
+}
